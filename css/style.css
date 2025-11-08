@@ -84,6 +84,11 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
 }
 
+.block-center-horis {
+    display: flex;
+    align-items: center;
+}
+
 .button {
     border-radius: 5rem;
     padding: 1rem 3rem;
@@ -200,6 +205,102 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.4;
 }
 
+
+
+/* progress - Прогресс курса */
+
+.course {
+    padding-top: 100px;
+}
+
+.course__wrap {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.course-button__wrap {
+    display: flex;
+    flex-shrink: 0;
+    margin-right: 81px;
+}
+
+.course__button {
+    background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+}
+
+.course__counter {
+    min-width: 251px;
+    margin-right: 81px;
+}
+
+.course__counter-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.course__counter-line, 
+.course__progress-label {
+    color: #FFFFFF40;
+}
+
+.course__progress-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 279px;
+}
+
+.course__number {
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.course__progress {
+    width: 100%;
+}
+
+.course__progress-element {
+    width: 100%;
+}
+
+.course__progress-minmax {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFFFFF40;
+}
+
+progress,
+progress[value],
+progress:not([value]) {
+    appearance: none;
+    width: 100%;
+    margin: 5px 0;
+}
+
+progress::-webkit-progress-bar {
+    background: #FFFFFF;
+    height: 6px;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+    height: 6px;
+}
+
+progress {
+    background: #FFFFFF;
+    height: 6px;
+}
+
+progress::-moz-progress-value {
+    background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+    height: 6px;
+}
+
 /* work - Чем мы занимаемся */
 
 .work {
@@ -305,6 +406,99 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.5;
 }
 
+
+
+/* program - Программа курса */
+
+.program {
+    margin-bottom: 200px;
+}
+
+.program__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.program__content::before {
+    content: '';
+    position: absolute;
+    background-image: url('/img/line.png');
+    width: 86px;
+    height: 100%;
+    background-repeat: no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.program-line {
+    display: flex;    
+    justify-content: space-between;
+    width: 750px;
+}
+
+.program-line__content:nth-child(n) {
+    text-align: right;
+}
+
+.program-line__content:nth-child(2n) {
+    text-align: left;
+    margin-top: 76px;
+}
+
+
+.program__image {
+    margin: 0 auto;
+    width: 90px;
+    margin-bottom: 76px;
+}
+
+.program__header {
+    text-align: center;
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 140%;
+}
+
+.program__description {
+    max-width: 410px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #FFFFFF40;
+    margin: 30px auto 80px auto;
+}
+
+.program-line__content {
+    width: 304px;
+    height: 115px;
+}
+
+.program-line__descr {
+    height: 0;
+    overflow: hidden;
+}
+
+.program-line__descr.active {
+    height: auto;
+    overflow: auto;
+}
+
+.program-line__title {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: #FFFFFF40;
+}
+
+.program-line__descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+}
 
 /* comand - Наша команда */
 
@@ -466,7 +660,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .modal__input {
-    padding-left: 1rem;
+    padding-left: 2rem;
     width: 100%;
     height: 100%;
     background-color: grey;
@@ -475,6 +669,10 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 160%;
     color: #FFFFFF;
     opacity: 0.8;
+}
+
+.modal__input::placeholder {
+    color: rgb(218, 218, 218);
 }
 
 .modal__item:not(:last-child) {
@@ -491,8 +689,106 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+.active {
+    display: flex;
+}
 
 .noscroll {
     overflow: hidden;
     height: 100%;
 }
+
+
+
+/*сетка*/
+@media (max-width: 108em) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 105em) {
+    html {
+        font-size: 8.75px;
+    }
+}
+
+@media (max-width: 91.5em) {
+    html {
+        font-size: 7.9px;
+    }
+}
+
+@media (max-width: 91em) {
+    html {
+        font-size: 8.4px;
+    }
+}
+
+@media (max-width: 90em) {
+    html {
+        font-size: 7.9px;
+    }
+}
+
+@media (max-width: 80em) {
+    html {
+        font-size: 7.2px
+    }
+}
+
+@media (max-width: 72em) {
+    html {
+        font-size: 6.5px;
+    }
+}
+
+@media (max-width: 64em) {
+    html {
+        font-size: 5.5px;
+    }
+}
+
+@media (max-width: 48em) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 44em) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 38em) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 34em) {
+    html {
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 30em) {
+    html {
+        font-size: 6px;
+    }
+}
+
+@media (max-width: 26em) {
+    html {
+        font-size: 4.5px;
+    }
+}
+
+@media (max-width: 21em) {
+    html {
+        font-size: 4.4px;
+    }
+}
+
+/*сетка*/
